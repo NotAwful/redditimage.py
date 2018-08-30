@@ -85,6 +85,8 @@ def reddit_scrape(subreddit, count):
     more images than requested. It grabs all the images on a page, then checks
     how many images it has gathered.
     [!] COUNT IS NOT IMPLEMENTED, ONLY SCANS THE FIRST PAGE
+:note: Adding new sources (like imgur), add another pages.update().
+    The logic for checking whether or not a source exists is in the functions.
 '''
     pages = set()
     headers = {'User-Agent': 'Mozilla/5.0'}
