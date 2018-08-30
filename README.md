@@ -14,6 +14,5 @@ if __name__ == '__main__':
 ```
 
 ## To-do:
-1. Implement image count loop
-2. Implement imgur() function
-3. implement parameters/arguments for operation from command line
+1. Implement imgur() function
+2. implement parameters/arguments for operation from command line
