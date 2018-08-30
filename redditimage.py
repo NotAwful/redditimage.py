@@ -56,6 +56,16 @@ def ireddit(page):
         print(local_tasks)
     return local_tasks
 
+def testparsers(testfile):
+    if verbose: print("[i] Testting Parsers.")
+    pages = set()
+    subreddit = etree.fromstring(open(testfile).read(), htmlparser)
+    pages.update(ireddit(subreddit))
+    if verbose:
+        print("[i] Contents of pages:")
+        print(pages)
+    for link in pages: print(link)
+
 def reddit_scrape(subreddit, count):
     '''
     :param subreddit, type string: Which subreddit to query. Do not include /r/,
@@ -94,4 +104,5 @@ Change to the name of the subreddit you are targeting and the number of
     images to grab.
 '''
 if __name__ == '__main__':
-	reddit_scrape("Cyberpunk", 10)
+    # testparsers('cyberpunk.html')
+    reddit_scrape("Cyberpunk", 10)
